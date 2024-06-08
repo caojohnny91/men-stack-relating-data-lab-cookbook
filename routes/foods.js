@@ -6,6 +6,8 @@ router.get("/", foodsController.index); // connecting with controllers
 
 router.get('/new', foodsController.newPage);
 
+router.post('/', foodsController.create);
+
 
 
 
