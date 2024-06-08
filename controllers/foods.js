@@ -8,8 +8,17 @@ const index = async (req, res) => {
     }
 };
 
+const newPage = async (req, res) => {
+    try {
+        res.render('foods/new.ejs');
+    } catch (error) {
+        res.redirect('/');
+    }
+};
+
 
 
 module.exports = {
     index,
+    newPage,
 };
