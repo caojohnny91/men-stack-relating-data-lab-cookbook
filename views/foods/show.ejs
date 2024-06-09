@@ -9,7 +9,7 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= food.name %> </h1>
+    <h1><%= food.name %></h1>
 
     <a href="/users/<%= user._id %>/foods/<%= food._id %>/edit">
       <button type="submit">Edit this Food</button>
@@ -23,5 +23,3 @@
     </form>
   </body>
 </html>
-
-<!-- We want to make sure we account for any optional data using conditional logic so that the user is only shown information they opted to include. We can do this by using the < % if(data) %> convention. -->

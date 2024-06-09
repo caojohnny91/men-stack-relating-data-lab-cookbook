@@ -12,8 +12,8 @@ router.get("/:foodId", foodsController.show);
 
 router.delete("/:foodId", foodsController.deleteFood);
 
-router.get('/:foodId/edit', foodsController.edit);
+router.get("/:foodId/edit", foodsController.edit);
 
-router.put('/:foodId', foodsController.update);
+router.put("/:foodId", foodsController.update);
 
 module.exports = router;
