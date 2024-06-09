@@ -1,0 +1,28 @@
+<!-- views/applications/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= food.title %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= food.name %> </h1>
+
+    <a href="/users/<%= user._id %>/foods/<%= food._id %>/edit">
+      Edit this application
+    </a>
+
+    <!-- We'll use method-override to allow us to hit a delete route: -->
+    <form
+      action="/users/<%= user._id %>/foods/<%= food._id %>?_method=DELETE"
+      method="POST"
+    >
+      <button type="submit">Delete Food</button>
+    </form>
+  </body>
+</html>
+
+<!-- We want to make sure we account for any optional data using conditional logic so that the user is only shown information they opted to include. We can do this by using the < % if(data) %> convention. -->
